@@ -6,17 +6,18 @@ import { SidebarData } from "./SidebarData";
 const Sidebar = () => {
   return (
     <div className="Sidebar">
-      <ul>
+      <ul className="SidebarList">
         {SidebarData.map((item, idx) => (
           <li
-            className=""
+            className="row"
+            id={window.location.pathname === item.link ? "active" : ""}
             key={idx}
             onClick={() => {
               window.location.pathname = item.link;
             }}
           >
-            <div className="">{item.icon}</div>
-            <div className="">{item.title}</div>
+            <div className="icon">{item.icon}</div>
+            <div className="title">{item.title}</div>
           </li>
         ))}
       </ul>
