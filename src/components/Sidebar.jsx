@@ -12,7 +12,7 @@ const Sidebar = () => {
             className=""
             key={idx}
             onClick={() => {
-              window.location.href(item.link);
+              window.location.pathname = item.link;
             }}
           >
             <div className="">{item.icon}</div>
